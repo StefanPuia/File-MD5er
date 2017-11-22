@@ -3,7 +3,7 @@ const readDirFiles = require('read-dir-files');
 const fs = require('fs');
 
 //default path is current path
-let path = '.';
+let path = './files';
 if (process.argv.length > 2) {
     path = process.argv[2];
 }
