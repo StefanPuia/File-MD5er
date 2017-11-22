@@ -30,7 +30,8 @@ readDirFiles.list(path, function (err, filenames) {
 			// do not change this file if running in current directory
 			if(file != "index.js") {
 				// get the extension
-				let ext = file.split('.')[1];
+				let fileparts = file.split('.');
+				let ext = fileparts[fileparts.length - 1];
 
 				// get the md5 of the file
 				md5File(filename, (err, hash) => {
